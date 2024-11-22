@@ -18,7 +18,7 @@ terraform {
 
 ## Decoding a Vault root token
 
-The `vaultdecode::root_token` function decodes a Vault root token.
+The `root_token` function decodes a Vault root token using the encoded token, one-time password, and its length.
 
 ```hcl
 output "decoded_root_token" {
