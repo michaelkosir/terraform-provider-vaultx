@@ -60,7 +60,7 @@ func (p *VaultXProvider) DataSources(ctx context.Context) []func() datasource.Da
 
 func (p *VaultXProvider) Functions(ctx context.Context) []func() function.Function {
 	return []func() function.Function{
-		NewRootTokenFunction,
+		NewRootTokenDecodeFunction,
 	}
 }
 

@@ -12,21 +12,21 @@ import (
 )
 
 var (
-	_ function.Function = RootTokenFunction{}
+	_ function.Function = RootTokenDecodeFunction{}
 )
 
-func NewRootTokenFunction() function.Function {
-	return RootTokenFunction{}
+func NewRootTokenDecodeFunction() function.Function {
+	return RootTokenDecodeFunction{}
 }
 
-type RootTokenFunction struct {
+type RootTokenDecodeFunction struct {
 }
 
-func (r RootTokenFunction) Metadata(_ context.Context, req function.MetadataRequest, resp *function.MetadataResponse) {
+func (r RootTokenDecodeFunction) Metadata(_ context.Context, req function.MetadataRequest, resp *function.MetadataResponse) {
 	resp.Name = "token"
 }
 
-func (r RootTokenFunction) Definition(_ context.Context, _ function.DefinitionRequest, resp *function.DefinitionResponse) {
+func (r RootTokenDecodeFunction) Definition(_ context.Context, _ function.DefinitionRequest, resp *function.DefinitionResponse) {
 	resp.Definition = function.Definition{
 		Summary:             "Decodes a Vault root token",
 		MarkdownDescription: "This function decodes a Vault root token and returns the decoded value.",
@@ -48,7 +48,7 @@ func (r RootTokenFunction) Definition(_ context.Context, _ function.DefinitionRe
 	}
 }
 
-func (r RootTokenFunction) Run(ctx context.Context, req function.RunRequest, resp *function.RunResponse) {
+func (r RootTokenDecodeFunction) Run(ctx context.Context, req function.RunRequest, resp *function.RunResponse) {
 	var token, otp string
 	var otpLen int
 
