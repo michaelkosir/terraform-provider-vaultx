@@ -23,7 +23,7 @@ type RootTokenDecodeFunction struct {
 }
 
 func (r RootTokenDecodeFunction) Metadata(_ context.Context, req function.MetadataRequest, resp *function.MetadataResponse) {
-	resp.Name = "token"
+	resp.Name = "decode"
 }
 
 func (r RootTokenDecodeFunction) Definition(_ context.Context, _ function.DefinitionRequest, resp *function.DefinitionResponse) {
