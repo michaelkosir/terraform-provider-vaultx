@@ -1,6 +1,6 @@
 # Terraform Provider: vaultx
 
-The [vaultx](https://registry.terraform.io/providers/michaelkosir/vaultx/latest/docs) provider is used to decode Vault root tokens with.
+The [vaultx](https://registry.terraform.io/providers/michaelkosir/vaultx/latest/docs) provider is used to experiment with new Terraform features before they enter the official HashiCorp supported `vault` provider. This project is not owned, maintained or supported by HashiCorp. Use at your own risk.
 
 * [Terraform Registry](https://registry.terraform.io/providers/michaelkosir/vaultx/latest/docs)
 
