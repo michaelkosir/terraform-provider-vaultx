@@ -1,4 +1,4 @@
-module github.com/michaelkosir/terraform-provider-vaultdecode
+module github.com/michaelkosir/terraform-provider-vaultx
 
 go 1.22.7
 

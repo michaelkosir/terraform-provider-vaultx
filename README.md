@@ -1,16 +1,16 @@
-# Terraform Provider: vaultdecode
+# Terraform Provider: vaultx
 
-The [vaultdecode](https://registry.terraform.io/providers/michaelkosir/vaultdecode/latest/docs) provider is used to decode Vault root tokens with.
+The [vaultx](https://registry.terraform.io/providers/michaelkosir/vaultx/latest/docs) provider is used to decode Vault root tokens with.
 
-* [Terraform Registry](https://registry.terraform.io/providers/michaelkosir/vaultdecode/latest/docs)
+* [Terraform Registry](https://registry.terraform.io/providers/michaelkosir/vaultx/latest/docs)
 
 To use provider functions, declare the provider as a required provider in your Terraform configuration:
 
 ```hcl
 terraform {
   required_providers {
-    vaultdecode = {
-      source = "michaelkosir/vaultdecode"
+    vaultx = {
+      source = "michaelkosir/vaultx"
     }
   }
 }
@@ -18,11 +18,11 @@ terraform {
 
 ## Decoding a Vault root token
 
-The `root_token` function decodes a Vault root token using the encoded token, one-time password, and its length.
+The `decode` function decodes a Vault root token using the encoded token, one-time password, and its length.
 
 ```hcl
-output "decoded_root_token" {
-  value = provider::vaultdecode::root_token("PzVHSRMXERYIFCl9IhIMKwUoMz8OJBEgXAIIdQ", "WC4gXgKrEUZIRDxHRNTiiUIf9GO8", 28)
+output "token" {
+  value = provider::vaultx::decode("PzVHSRMXERYIFCl9IhIMKwUoMz8OJBEgXAIIdQ", "WC4gXgKrEUZIRDxHRNTiiUIf9GO8", 28)
 }
 ```
 

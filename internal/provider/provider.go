@@ -14,34 +14,34 @@ import (
 )
 
 // Ensure ScaffoldingProvider satisfies various provider interfaces.
-var _ provider.Provider = &VaultDecodeProvider{}
-var _ provider.ProviderWithFunctions = &VaultDecodeProvider{}
+var _ provider.Provider = &VaultXProvider{}
+var _ provider.ProviderWithFunctions = &VaultXProvider{}
 
-// VaultDecodeProvider defines the provider implementation.
-type VaultDecodeProvider struct {
+// VaultXProvider defines the provider implementation.
+type VaultXProvider struct {
 	// version is set to the provider version on release, "dev" when the
 	// provider is built and ran locally, and "test" when running acceptance
 	// testing.
 	version string
 }
 
-// VaultDecodeProviderModel describes the provider data model.
-type VaultDecodeProviderModel struct {
+// VaultXProviderModel describes the provider data model.
+type VaultXProviderModel struct {
 }
 
-func (p *VaultDecodeProvider) Metadata(ctx context.Context, req provider.MetadataRequest, resp *provider.MetadataResponse) {
-	resp.TypeName = "vaultdecode"
+func (p *VaultXProvider) Metadata(ctx context.Context, req provider.MetadataRequest, resp *provider.MetadataResponse) {
+	resp.TypeName = "vaultx"
 	resp.Version = p.version
 }
 
-func (p *VaultDecodeProvider) Schema(ctx context.Context, req provider.SchemaRequest, resp *provider.SchemaResponse) {
+func (p *VaultXProvider) Schema(ctx context.Context, req provider.SchemaRequest, resp *provider.SchemaResponse) {
 	resp.Schema = schema.Schema{
 		Attributes: map[string]schema.Attribute{},
 	}
 }
 
-func (p *VaultDecodeProvider) Configure(ctx context.Context, req provider.ConfigureRequest, resp *provider.ConfigureResponse) {
-	var data VaultDecodeProviderModel
+func (p *VaultXProvider) Configure(ctx context.Context, req provider.ConfigureRequest, resp *provider.ConfigureResponse) {
+	var data VaultXProviderModel
 
 	resp.Diagnostics.Append(req.Config.Get(ctx, &data)...)
 
@@ -50,15 +50,15 @@ func (p *VaultDecodeProvider) Configure(ctx context.Context, req provider.Config
 	}
 }
 
-func (p *VaultDecodeProvider) Resources(ctx context.Context) []func() resource.Resource {
+func (p *VaultXProvider) Resources(ctx context.Context) []func() resource.Resource {
 	return []func() resource.Resource{}
 }
 
-func (p *VaultDecodeProvider) DataSources(ctx context.Context) []func() datasource.DataSource {
+func (p *VaultXProvider) DataSources(ctx context.Context) []func() datasource.DataSource {
 	return []func() datasource.DataSource{}
 }
 
-func (p *VaultDecodeProvider) Functions(ctx context.Context) []func() function.Function {
+func (p *VaultXProvider) Functions(ctx context.Context) []func() function.Function {
 	return []func() function.Function{
 		NewRootTokenFunction,
 	}
@@ -66,7 +66,7 @@ func (p *VaultDecodeProvider) Functions(ctx context.Context) []func() function.F
 
 func New(version string) func() provider.Provider {
 	return func() provider.Provider {
-		return &VaultDecodeProvider{
+		return &VaultXProvider{
 			version: version,
 		}
 	}
