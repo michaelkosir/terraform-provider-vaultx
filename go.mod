@@ -1,13 +1,13 @@
 module github.com/michaelkosir/terraform-provider-vaultx
 
 go 1.22.7
-toolchain go1.23.6
+toolchain go1.24.1
 
 require (
 	github.com/hashicorp/terraform-plugin-framework v1.14.1
 	github.com/hashicorp/terraform-plugin-go v0.26.0
 	github.com/hashicorp/terraform-plugin-testing v1.11.0
-	github.com/hashicorp/vault/sdk v0.15.0
+	github.com/hashicorp/vault/sdk v0.15.2
 )
 
 require (

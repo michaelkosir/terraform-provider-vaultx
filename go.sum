@@ -100,8 +100,8 @@ github.com/hashicorp/terraform-registry-address v0.2.4 h1:JXu/zHB2Ymg/TGVCRu10Xq
 github.com/hashicorp/terraform-registry-address v0.2.4/go.mod h1:tUNYTVyCtU4OIGXXMDp7WNcJ+0W1B4nmstVDgHMjfAU=
 github.com/hashicorp/terraform-svchost v0.1.1 h1:EZZimZ1GxdqFRinZ1tpJwVxxt49xc/S52uzrw4x0jKQ=
 github.com/hashicorp/terraform-svchost v0.1.1/go.mod h1:mNsjQfZyf/Jhz35v6/0LWcv26+X7JPS+buii2c9/ctc=
-github.com/hashicorp/vault/sdk v0.15.0 h1:xNo1lL2shm0yE4coXNZkTV/6++2GfEh+/cCAfBjzEnA=
-github.com/hashicorp/vault/sdk v0.15.0/go.mod h1:2Wj2tHIgfz0gNWgEPWBbCXFIiPrq96E8FTjPNV9J1Bc=
+github.com/hashicorp/vault/sdk v0.15.2 h1:Rp5Yp4lyBhlWgq24ZVb2n/YN47RKOAvmx/jlMfS9ku4=
+github.com/hashicorp/vault/sdk v0.15.2/go.mod h1:2Wj2tHIgfz0gNWgEPWBbCXFIiPrq96E8FTjPNV9J1Bc=
 github.com/hashicorp/yamux v0.1.1 h1:yrQxtgseBDrq9Y652vSRDvsKCJKOUD+GzTS4Y0Y8pvE=
 github.com/hashicorp/yamux v0.1.1/go.mod h1:CtWFDAQgb7dxtzFs4tWbplKIe2jSi3+5vKbgIO0SLnQ=
 github.com/jbenet/go-context v0.0.0-20150711004518-d14ea06fba99 h1:BQSFePA1RWJOlocH6Fxy8MmwDt+yVQYULKfN0RoTN8A=
